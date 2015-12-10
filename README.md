@@ -22,4 +22,4 @@ This is my first work on Evolus Pencil (was asked to create wireframes for a cli
 Was a nice experience and will most probably enhance this plugin/template when I've got more time.
 
 
-### For installation and usage, please take a look at the wiki: https://github.com/mrmadhav/Evolus-Pencil-HTML-Export-Template/wiki
+### For installation and usage, please take a look at the wiki: https://github.com/ahaqxjl/Evolus-Pencil-HTML-Export-Template/wiki
