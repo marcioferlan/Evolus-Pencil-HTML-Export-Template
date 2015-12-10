@@ -6,7 +6,7 @@
     cdata-section-elements="script style"
     indent="yes"
     encoding="ISO-8859-1"/>
-    <xsl:output method="html"/>
+    <xsl:output method="html" encoding="UTF-8"/>
 
     <xsl:template match="/">
         <html>
