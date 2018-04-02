@@ -49,6 +49,7 @@ body {
 #main {
 	margin-left:190px;
 	overflow:auto;
+	background-color: slategray !important;
 }
 
 .page {
@@ -63,15 +64,18 @@ body {
 	color:lightgrey;
 	display:block;
 	float:right;
-	|margin:-25px 5px 0 0 ;
+	margin:-25px 5px 0 0 ;
 }
 .pageTitle {
 	font-size:16px;
 	border:1px solid black;
 	padding:4px;
 }
+.ImageContainer {
+	padding-left: 33%;
+}
 .raster {
-	border:1px dotted lightgrey;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 	margin:10px 0;
 	width:100%;
 }
