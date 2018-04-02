@@ -1,13 +1,17 @@
 /**
  * Created by Madhav on 14 August 2014.
  */
-
 $(document).ready(function () {
 	/*** Using jQuery Layout, set the layout column/rows of the page ***/
-	$('body').layout({ applyDefaultStyles: true, minSize:140 });
+	$('body').layout({ 
+		applyDefaultStyles: true, 
+		minSize:140, 
+		west__initClosed: true,
+		south__initClosed: true
+	});
     
 	/*** Define URL page Mappings - Will be invoked each time the URL changes ***/
-	Path.map("#/page/:page_id").to(function(){
+	Path.map("#/page/:page_id").to(function() {
 		/*** Get the Page ID from the URL ***/
         var page_id = this.params['page_id'];
 		
@@ -21,8 +25,7 @@ $(document).ready(function () {
 		$('#pageNotes').empty();
 		
 		/*** Does the page have any notes ? ***/
-		if($('#'+page_id+ ' .notes').length!==0)
-		{
+		if ($('#'+page_id+ ' .notes').length!==0) {
 			/*** Yes, it does, so just copy the notes to the pageNotes container ***/
 			$('#pageNotes').html($('#'+page_id+ ' .notes').html());
 		}
