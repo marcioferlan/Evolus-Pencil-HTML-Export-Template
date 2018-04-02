@@ -28,36 +28,37 @@
                     <xsl:value-of select="/p:Document/p:Properties/p:Property[@name='fileName']/text()"/>
                 </h1>
                 <div id="leftpanel" class="ui-layout-west">
-                        <xsl:for-each select="/p:Document/p:Pages/p:Page">
-                            <div class="ThumbContainer">
-                                <a href="#/page/{p:Properties/p:Property[@name='fid']/text()}" >
-                                    <img src="{@rasterized}" style="min-width:100px"/>
-                                    <hr/>
-                                    <span class="number">
-                                        <xsl:number value="position()" format="1"/>/<xsl:number value="last()" format="1"/>
-                                    </span> -
-                                    <xsl:value-of select="p:Properties/p:Property[@name='name']/text()"/>
-                                </a>
-                            </div>
-                        </xsl:for-each>
+                    <xsl:for-each select="/p:Document/p:Pages/p:Page">
+                        <div class="ThumbContainer">
+                            <a href="#/page/{p:Properties/p:Property[@name='fid']/text()}" >
+                                <img src="{@rasterized}" style="min-width:100px"/>
+                                <hr />
+                                <span class="number">
+                                    <xsl:number value="position()" format="1"/>/<xsl:number value="last()" format="1"/>
+                                </span> -
+                                <xsl:value-of select="p:Properties/p:Property[@name='name']/text()"/>
+                            </a>
+                        </div>
+                    </xsl:for-each>
                 </div>
                 <div id="main" class="ui-layout-center">
-                        <xsl:apply-templates select="/p:Document/p:Pages/p:Page" />
+                    <xsl:apply-templates select="/p:Document/p:Pages/p:Page" />
                 </div>
-				<div id="pageNotes" class="ui-layout-south"></div>
-                <p id="documentMetadata">Exported at: <xsl:value-of select="/p:Document/p:Properties/p:Property[@name='exportTime']/text()"/>
-                </p>
+                <div id="pageNotes" class="ui-layout-south"></div>
+                <p id="documentMetadata">Exported at: <xsl:value-of select="/p:Document/p:Properties/p:Property[@name='exportTime']/text()"/></p>
             </body>
         </html>
     </xsl:template>
     <xsl:template match="p:Page">
         <div class="page" id="{p:Properties/p:Property[@name='fid']/text()}">
+            <!--
             <div class="pageTitle">
                 <xsl:value-of select="p:Properties/p:Property[@name='name']/text()"/>
                 <div class="MainNumber">
                     Page <xsl:number value="position()" format="1"/>/<xsl:number value="last()" format="1"/>
                 </div>
             </div>
+            -->
             <div class="ImageContainer">
                 <img class="raster" style="max-width:{p:Properties/p:Property[@name='width']/text()}px" src="{@rasterized}" usemap="#map_{p:Properties/p:Property[@name='fid']/text()}"/>
             </div>
