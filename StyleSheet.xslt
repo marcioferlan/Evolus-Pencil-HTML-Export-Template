@@ -51,14 +51,6 @@
     </xsl:template>
     <xsl:template match="p:Page">
         <div class="page" id="{p:Properties/p:Property[@name='fid']/text()}">
-            <!--
-            <div class="pageTitle">
-                <xsl:value-of select="p:Properties/p:Property[@name='name']/text()"/>
-                <div class="MainNumber">
-                    Page <xsl:number value="position()" format="1"/>/<xsl:number value="last()" format="1"/>
-                </div>
-            </div>
-            -->
             <div class="ImageContainer">
                 <img class="raster" style="max-width:{p:Properties/p:Property[@name='width']/text()}px" src="{@rasterized}" usemap="#map_{p:Properties/p:Property[@name='fid']/text()}"/>
             </div>
